@@ -4,14 +4,41 @@
 
     {% include "recipes/partials/header.html" %}
 
-    <div class="search-container">
-        <div class="container">
-            <form action="" class="search-form">
-                <input type="search" class="search-input" name="search">
-                <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+    {% include "recipes/partials/search-container.html" %}
+
+    <main class="main-content-container">
+        <div class="main-content main-content-list container">
+            <div class=" recipe recipe-list-item">
+                <div class="recipe-cover">
+                    <img src="https://placehold.co/1280x720.png" alt="Temporary">
+                </div>
+                <div class="recipe-title-container">
+                    <h2 class="recipe-title">
+                        Lorem ipsum dolor sit amet.
+                    </h2>
+                </div>
+
+                <div class="recipe-author">
+                    <span class="recipe-author-item">
+                        <i class="fa-solid fa-user"></i>
+                        Nickolas Dos Santos Cremasco
+                    </span>
+                    <span class="recipe-author-item">
+                        <i class="fa-solid fa-calendar-alt"></i>
+                        
+                    </span>
+                    <span class="recipe-author-item">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>Café da manhã</span>
+                       
+                    </span>
+                    
+                </div>
+
+            </div>
+
         </div>
-    </div>
+    </main>
 </body>
 
 </html>
