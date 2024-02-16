@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            #Django da prioridade pela ordem que ele encontrar os arquivos aqui
+            #Django gives the priority to ordem then he finds arquives here
             BASE_DIR / 'base_templates',
             BASE_DIR / 'recipes' / 'templates_temp'
         ],
@@ -122,6 +122,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/' 
+
+#this add to file the external static 
+STATICFILES_DIRS = [
+    BASE_DIR / ''
+]
+#always when you work with paths use BASE_DIR
+
+STATIC_ROOT = BASE_DIR / 'static'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
