@@ -126,10 +126,10 @@ STATIC_URL = 'static/'
 #this add to file the external static 
 STATICFILES_DIRS = [
     BASE_DIR / ''
-]
+],
 #always when you work with paths use BASE_DIR
 
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'static',
 
 
 
