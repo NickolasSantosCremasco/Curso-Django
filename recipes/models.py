@@ -22,8 +22,9 @@ class Recipe(models.Model):
     preparation_steps = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateField(auto_now = True)
+    preparation_steps_is_html = models.BooleanField(default = False)
     is_published = models.BooleanField(default = False)
-    cover = models.ImageField(upload_to='recipes/covers/%Y/%m/%d/')
+    cover = models.ImageField(upload_to='recipes/covers/%Y/%m/%d/', blank=True, default='')
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, null = True
     )
@@ -31,6 +32,8 @@ class Recipe(models.Model):
         User , on_delete = models.SET_NULL, null = True
     )
 
+    def __str__(self):
+        return self.title
 
 
 
